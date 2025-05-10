@@ -231,13 +231,21 @@ app.put("/api/faults/:referenceId",upload.fields([
   { name: 'image1', maxCount: 1 }
 ]), async (req, res) => {
   const { referenceId } = req.params;
-  const data = req.body;
+ 
+  let data;
 
-  console.log(data);
+  
   if (!referenceId) {
     return res.status(400).json({ error: "Reference ID is required." });
   }
 
+  try {
+    data = JSON.parse(req.body.json_data || '{}');
+  } catch (e) {
+    return res.status(400).json({ error: "Invalid JSON data" });
+  }
+
+  console.log(data);
   // delete data.incidentPhoto;
   // delete data.incidentPhoto1;
   if (req.files['image']) {
@@ -252,6 +260,8 @@ app.put("/api/faults/:referenceId",upload.fields([
   }else{
   data.incidentPhoto1="";
 }
+
+console.log("updated data "+data);
 
   try {
     const updatedFault = await Theft.findOneAndUpdate(
