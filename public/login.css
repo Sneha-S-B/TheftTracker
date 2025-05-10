@@ -1,0 +1,102 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  section {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+  }
+  
+  /* section h1 {
+    text-align: left;
+    margin-bottom: 30px;
+    color: #333;
+  } */
+  section h1 {
+    text-align: left;
+    margin-bottom: 30px;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect */
+  section h1:hover {
+    color: #007BFF;        /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the text */
+    cursor: pointer;        /* Show pointer cursor */
+  }
+  
+  /* ---1 */
+  .login-form h4 {
+    margin: 15px 0 5px;
+    color: #444;
+    font-size: 15px;
+  }
+  
+  .username-input,
+  .password-input {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .username-input i,
+  .password-input i {
+    margin-right: 10px;
+    color: #888;
+  }
+  
+  .username-input input,
+  .password-input input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background: #357bd8;
+  }
+  
+  .alternative-signup {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666;
+  }
+  
+ /* IT 
+ #insurnaceTracker {
+  display: none;
+} */
