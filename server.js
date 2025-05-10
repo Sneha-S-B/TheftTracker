@@ -97,18 +97,12 @@ const upload = multer({
   }
 });
 
-//app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files
+app.use(express.static(path.join(__dirname, 'public')));
 
-console.log(path.join(__dirname, 'public'));
-
-// Serve the 'index.html' file when accessing the root route
-app.get("/", (req, res) => {
-  console.log("Root route reached");
-  res.json({
-    message: "Request successfully reached the root route!",
-    status: "success",
-    timestamp: new Date().toISOString()
-  });
+// Catch-all route for SPA support (React/Vue/etc.)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.use(express.json());
