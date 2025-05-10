@@ -233,6 +233,7 @@ app.put("/api/faults/:referenceId",upload.fields([
   const { referenceId } = req.params;
   const data = req.body;
 
+  console.log(data);
   if (!referenceId) {
     return res.status(400).json({ error: "Reference ID is required." });
   }
