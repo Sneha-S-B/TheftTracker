@@ -25,9 +25,9 @@ window.onload = async () => {
 
 
       // Disable theft Description fields
-      const faultDescriptionSection = document.querySelector('.form-section');
-      const inputs = faultDescriptionSection.querySelectorAll('input, select, textarea, button');
-      inputs.forEach(input => input.disabled = true);
+      // const faultDescriptionSection = document.querySelector('.form-section');
+      // const inputs = faultDescriptionSection.querySelectorAll('input, select, textarea, button');
+      // inputs.forEach(input => input.disabled = true);
 
       // Show middle and lower sections and lower1
       showSection('actionPlan');

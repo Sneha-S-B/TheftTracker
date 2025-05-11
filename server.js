@@ -15,11 +15,12 @@ app.use(express.json());
 
 
 
-// Connect to MongoDB
+//Connect to MongoDB local
 // mongoose.connect("mongodb://localhost:27017/theftTracker", {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 // });
+//cloud mongo db
 mongoose.connect("mongodb+srv://admin:passworD@cluster0.kcmpdt3.mongodb.net/theftTracker", {
      useNewUrlParser: true,
    useUnifiedTopology: true,
